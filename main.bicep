@@ -1,7 +1,7 @@
 targetScope = 'subscription'
 
 param location string = 'southcentralus'
-param resourcePrefix string = 'aks-dns-ex1'
+param resourcePrefix string = 'aks-dns-ex2'
 param zoneName string = 'contoso.com'
 param recordName string = 'db'
 
