@@ -1,0 +1,80 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: workload1
+  labels:
+    app: workload1
+spec:
+  replicas: 11
+  selector:
+    matchLabels:
+      app: workload1
+  template:
+    metadata:
+      labels:
+        app: workload1
+    spec:
+      containers:
+      - name: workload1
+        image: sturrent/dns-perf-test-loop:latest
+        resources:
+          requests:
+            memory: "10Mi"
+            cpu: "90m"
+          limits:
+            memory: "500Mi"
+            cpu: "900m"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: workload2
+  labels:
+    app: workload2
+spec:
+  replicas: 11
+  selector:
+    matchLabels:
+      app: workload2
+  template:
+    metadata:
+      labels:
+        app: workload2
+    spec:
+      containers:
+      - name: workload2
+        image: sturrent/dns-perf-test-loop:latest
+        resources:
+          requests:
+            memory: "10Mi"
+            cpu: "90m"
+          limits:
+            memory: "500Mi"
+            cpu: "900m"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: workload3
+  labels:
+    app: workload3
+spec:
+  replicas: 11
+  selector:
+    matchLabels:
+      app: workload3
+  template:
+    metadata:
+      labels:
+        app: workload3
+    spec:
+      containers:
+      - name: workload3
+        image: sturrent/dns-perf-test-loop:latest
+        resources:
+          requests:
+            memory: "10Mi"
+            cpu: "90m"
+          limits:
+            memory: "500Mi"
+            cpu: "900m"
