@@ -82,19 +82,8 @@ module roleAuthorization 'aks-auth.bicep' = {
   }
 }
 
-module kubernetes './dns-monitor.bicep' = {
+module kubernetes './workloads.bicep' = {
   name: 'buildbicep-deploy'
-  scope: clusterrg
-  dependsOn: [
-    akscluster
-  ]
-  params: {
-    kubeConfig: akscluster.outputs.kubeConfig
-  }
-}
-
-module kubernetes2 './workloads.bicep' = {
-  name: 'buildbicep-deploy2'
   scope: clusterrg
   dependsOn: [
     akscluster
