@@ -4,7 +4,7 @@ param kubeConfig string
 provider kubernetes with {
   namespace: 'default'
   kubeConfig: kubeConfig
-}
+} as k8s
 
 resource appsDeployment_dbCheck 'apps/Deployment@v1' = {
   metadata: {
