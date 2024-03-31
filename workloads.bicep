@@ -46,7 +46,7 @@ resource appsDeployment_workload1 'apps/Deployment@v1' = {
     }
   }
   spec: {
-    replicas: 13
+    replicas: 15
     selector: {
       matchLabels: {
         app: 'workload1'
@@ -88,7 +88,7 @@ resource appsDeployment_workload2 'apps/Deployment@v1' = {
     }
   }
   spec: {
-    replicas: 13
+    replicas: 15
     selector: {
       matchLabels: {
         app: 'workload2'
