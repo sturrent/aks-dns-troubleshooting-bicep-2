@@ -65,7 +65,7 @@ resource appsDeployment_workload1 'apps/Deployment@v1' = {
             image: 'sturrent/dns-perf-test-loop:latest'
             resources: {
               requests: {
-                memory: '50Mi'
+                memory: '70Mi'
                 cpu: '90m'
               }
               limits: {
@@ -107,7 +107,7 @@ resource appsDeployment_workload2 'apps/Deployment@v1' = {
             image: 'sturrent/dns-perf-test-loop:latest'
             resources: {
               requests: {
-                memory: '50Mi'
+                memory: '70Mi'
                 cpu: '90m'
               }
               limits: {
@@ -130,7 +130,7 @@ resource appsDeployment_workload3 'apps/Deployment@v1' = {
     }
   }
   spec: {
-    replicas: 13
+    replicas: 15
     selector: {
       matchLabels: {
         app: 'workload3'
@@ -149,7 +149,7 @@ resource appsDeployment_workload3 'apps/Deployment@v1' = {
             image: 'sturrent/dns-perf-test-loop:latest'
             resources: {
               requests: {
-                memory: '50Mi'
+                memory: '70Mi'
                 cpu: '90m'
               }
               limits: {
