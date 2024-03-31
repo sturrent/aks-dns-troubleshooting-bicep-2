@@ -25,7 +25,7 @@ metadata:
   labels:
     app: workload1
 spec:
-  replicas: 12
+  replicas: 13
   selector:
     matchLabels:
       app: workload1
@@ -39,11 +39,11 @@ spec:
         image: sturrent/dns-perf-test-loop:latest
         resources:
           requests:
-            memory: "10Mi"
-            cpu: "70m"
+            memory: "50Mi"
+            cpu: "90m"
           limits:
-            memory: "500Mi"
-            cpu: "900m"
+            memory: "700Mi"
+            cpu: "1"
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -52,7 +52,7 @@ metadata:
   labels:
     app: workload2
 spec:
-  replicas: 12
+  replicas: 13
   selector:
     matchLabels:
       app: workload2
@@ -66,11 +66,11 @@ spec:
         image: sturrent/dns-perf-test-loop:latest
         resources:
           requests:
-            memory: "10Mi"
-            cpu: "70m"
+            memory: "50Mi"
+            cpu: "90m"
           limits:
-            memory: "500Mi"
-            cpu: "900m"
+            memory: "700Mi"
+            cpu: "1"
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -79,7 +79,7 @@ metadata:
   labels:
     app: workload3
 spec:
-  replicas: 12
+  replicas: 13
   selector:
     matchLabels:
       app: workload3
@@ -93,8 +93,8 @@ spec:
         image: sturrent/dns-perf-test-loop:latest
         resources:
           requests:
-            memory: "10Mi"
-            cpu: "70m"
+            memory: "50Mi"
+            cpu: "90m"
           limits:
-            memory: "500Mi"
-            cpu: "900m"
+            memory: "700Mi"
+            cpu: "1"

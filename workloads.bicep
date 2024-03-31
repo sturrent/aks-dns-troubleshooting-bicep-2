@@ -46,7 +46,7 @@ resource appsDeployment_workload1 'apps/Deployment@v1' = {
     }
   }
   spec: {
-    replicas: 12
+    replicas: 13
     selector: {
       matchLabels: {
         app: 'workload1'
@@ -65,12 +65,12 @@ resource appsDeployment_workload1 'apps/Deployment@v1' = {
             image: 'sturrent/dns-perf-test-loop:latest'
             resources: {
               requests: {
-                memory: '10Mi'
-                cpu: '70m'
+                memory: '50Mi'
+                cpu: '90m'
               }
               limits: {
-                memory: '500Mi'
-                cpu: '900m'
+                memory: '700Mi'
+                cpu: '1'
               }
             }
           }
@@ -88,7 +88,7 @@ resource appsDeployment_workload2 'apps/Deployment@v1' = {
     }
   }
   spec: {
-    replicas: 12
+    replicas: 13
     selector: {
       matchLabels: {
         app: 'workload2'
@@ -107,12 +107,12 @@ resource appsDeployment_workload2 'apps/Deployment@v1' = {
             image: 'sturrent/dns-perf-test-loop:latest'
             resources: {
               requests: {
-                memory: '10Mi'
-                cpu: '70m'
+                memory: '50Mi'
+                cpu: '90m'
               }
               limits: {
-                memory: '500Mi'
-                cpu: '900m'
+                memory: '700Mi'
+                cpu: '1'
               }
             }
           }
@@ -130,7 +130,7 @@ resource appsDeployment_workload3 'apps/Deployment@v1' = {
     }
   }
   spec: {
-    replicas: 12
+    replicas: 13
     selector: {
       matchLabels: {
         app: 'workload3'
@@ -149,12 +149,12 @@ resource appsDeployment_workload3 'apps/Deployment@v1' = {
             image: 'sturrent/dns-perf-test-loop:latest'
             resources: {
               requests: {
-                memory: '10Mi'
-                cpu: '70m'
+                memory: '50Mi'
+                cpu: '90m'
               }
               limits: {
-                memory: '500Mi'
-                cpu: '900m'
+                memory: '700Mi'
+                cpu: '1'
               }
             }
           }
