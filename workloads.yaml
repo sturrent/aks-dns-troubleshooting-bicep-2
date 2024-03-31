@@ -25,7 +25,7 @@ metadata:
   labels:
     app: workload1
 spec:
-  replicas: 13
+  replicas: 12
   selector:
     matchLabels:
       app: workload1
@@ -40,7 +40,7 @@ spec:
         resources:
           requests:
             memory: "10Mi"
-            cpu: "90m"
+            cpu: "70m"
           limits:
             memory: "500Mi"
             cpu: "900m"
@@ -52,7 +52,7 @@ metadata:
   labels:
     app: workload2
 spec:
-  replicas: 13
+  replicas: 12
   selector:
     matchLabels:
       app: workload2
@@ -67,7 +67,7 @@ spec:
         resources:
           requests:
             memory: "10Mi"
-            cpu: "90m"
+            cpu: "70m"
           limits:
             memory: "500Mi"
             cpu: "900m"
@@ -79,7 +79,7 @@ metadata:
   labels:
     app: workload3
 spec:
-  replicas: 13
+  replicas: 12
   selector:
     matchLabels:
       app: workload3
@@ -94,7 +94,7 @@ spec:
         resources:
           requests:
             memory: "10Mi"
-            cpu: "90m"
+            cpu: "70m"
           limits:
             memory: "500Mi"
             cpu: "900m"
