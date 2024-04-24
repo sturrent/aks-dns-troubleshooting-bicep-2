@@ -25,7 +25,7 @@ metadata:
   labels:
     app: workload1
 spec:
-  replicas: 15
+  replicas: 13
   selector:
     matchLabels:
       app: workload1
@@ -52,7 +52,7 @@ metadata:
   labels:
     app: workload2
 spec:
-  replicas: 15
+  replicas: 13
   selector:
     matchLabels:
       app: workload2
@@ -79,7 +79,7 @@ metadata:
   labels:
     app: workload3
 spec:
-  replicas: 15
+  replicas: 13
   selector:
     matchLabels:
       app: workload3
