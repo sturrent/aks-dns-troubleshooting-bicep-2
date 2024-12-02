@@ -1,10 +1,10 @@
 @secure()
 param kubeConfig string
 
-provider 'kubernetes@1.0.0' with {
+extension kubernetes with {
   namespace: 'default'
   kubeConfig: kubeConfig
-} as k8s
+}
 
 resource appsDeployment_dbCheck 'apps/Deployment@v1' = {
   metadata: {
@@ -161,5 +161,15 @@ resource appsDeployment_workload3 'apps/Deployment@v1' = {
         ]
       }
     }
+  }
+}
+
+resource coreConfigMap_corednsCustom 'core/ConfigMap@v1' = {
+  metadata: {
+    name: 'coredns-custom'
+    namespace: 'kube-system'
+  }
+  data: {
+    'override-block.server': 'internal.cloudapp.net:53 { errors cache 30 forward . /etc/resolv.conf } reddog.microsoft.com:53 { errors cache 30 forward . /etc/resolv.conf }'
   }
 }
