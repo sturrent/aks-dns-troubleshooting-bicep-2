@@ -105,14 +105,14 @@ metadata:
   name: coredns-custom
   namespace: kube-system
 data:
-    override-block.server: |
-       internal.cloudapp.net:53 {
-           errors
-           cache 30
-           forward . /etc/resolv.conf
-       }
-       reddog.microsoft.com:53 {
-           errors
-           cache 30
-           forward . /etc/resolv.conf
-       }
+  override-block.server: |
+    internal.cloudapp.net:53 {
+      errors
+      cache 30
+      forward . /etc/resolv.conf
+    }
+    reddog.microsoft.com:53 {
+      errors
+      cache 30
+      forward . /etc/resolv.conf
+    }
